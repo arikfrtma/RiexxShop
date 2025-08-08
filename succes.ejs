@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran Sukses - <%= shopName %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><%= shopName %></h1>
+      <p>Pembayaran Berhasil</p>
+    </header>
+
+    <div class="success-container">
+      <h2>Pembayaran Sukses!</h2>
+      <p>Terima kasih telah membeli <%= order.product.name %> di <%= shopName %>.</p>
+      
+      <div class="server-details">
+        <h3>Detail Server</h3>
+        <p>Nama: <%= order.serverDetails.attributes.name %></p>
+        <p>ID: <%= order.serverDetails.attributes.identifier %></p>
+        <p>Status: Sedang diproses</p>
+      </div>
+
+      <p>Server Anda sedang dibuat dan akan siap dalam beberapa menit.</p>
+      <a href="/">Kembali ke Beranda</a>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 <%= shopName %>. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
